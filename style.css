@@ -1,0 +1,316 @@
+/* ===== COLOURS (change them here, used everywhere below) ===== */
+:root {
+  --cream: #f7f0ea;       /* page background */
+  --cream-dark: #efe6dd;  /* alternate sections */
+  --green-dark: #3b4a35;  /* headings and text */
+  --green: #7b8168;       /* sage green bands and buttons */
+  --gold: #b08d57;        /* thin lines and small accents */
+}
+
+/* ===== BASIC RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Jost", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--green-dark);
+  background-color: var(--cream);
+}
+
+h1, h2, h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+/* ===== NAVIGATION BAR ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background-color: var(--cream);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.navbar nav a {
+  margin-left: 28px;
+  font-size: 0.95rem;
+  color: var(--green-dark);
+  text-decoration: none;
+}
+
+.navbar nav a:hover {
+  color: var(--gold);
+}
+
+/* ===== HERO ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 50px 8% 70px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hello {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.8rem;
+  font-style: italic;
+  color: var(--gold);
+}
+
+.hero h1 {
+  font-size: 6.5rem;
+  margin: 5px 0 15px;
+}
+
+.role {
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+
+.intro {
+  max-width: 420px;
+  margin-bottom: 30px;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 32px;
+  background-color: var(--green-dark);
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.button:hover {
+  background-color: var(--green);
+}
+
+/* Arch-shaped photo: the big rounded top corners make the arch */
+.hero-photo {
+  width: 380px;
+  height: 480px;
+  border: 2px solid var(--gold);
+  border-radius: 190px 190px 0 0;
+  padding: 12px;
+  flex-shrink: 0;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 178px 178px 0 0;
+  display: block;
+}
+
+/* ===== QUICK FACTS STRIP ===== */
+.facts {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 32px 8%;
+  background-color: var(--green);
+  color: var(--cream);
+}
+
+.fact strong {
+  display: block;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.fact span {
+  font-size: 0.9rem;
+}
+
+/* ===== GENERAL SECTIONS ===== */
+.section {
+  padding: 80px 8%;
+}
+
+.section-alt {
+  background-color: var(--cream-dark);
+}
+
+.section h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* small gold line under each heading */
+.section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: var(--gold);
+  margin-top: 12px;
+}
+
+.about-text,
+.section-text {
+  max-width: 620px;
+  margin-top: 25px;
+  font-size: 1.15rem;
+}
+
+/* ===== EDUCATION CARDS ===== */
+.two-columns {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  flex: 1;
+  padding: 28px;
+  background-color: var(--cream);
+  border-left: 3px solid var(--gold);
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+}
+
+.small {
+  font-size: 0.9rem;
+  color: var(--green);
+}
+
+/* ===== EXPERIENCE PHOTOS ===== */
+.photos {
+  display: flex;
+  gap: 25px;
+  margin-top: 35px;
+  align-items: flex-start;
+}
+
+.photos img {
+  display: block;
+  border-radius: 8px;
+}
+
+.photo-poster {
+  width: 28%;
+}
+
+.photo-lab {
+  width: 72%;
+}
+
+/* ===== INTERESTS TAGS ===== */
+.tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.tags li {
+  padding: 12px 28px;
+  border: 1px solid var(--green);
+  border-radius: 50px;
+  font-size: 1.05rem;
+}
+
+/* ===== ACHIEVEMENT ===== */
+.achievement {
+  margin-top: 30px;
+  padding: 30px;
+  max-width: 560px;
+  background-color: var(--green);
+  color: var(--cream);
+}
+
+.achievement h3 {
+  font-size: 2rem;
+  margin-bottom: 6px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  padding: 28px;
+  background-color: var(--green-dark);
+  color: var(--cream);
+  font-size: 0.9rem;
+}
+
+/* ===== PHONE / SMALL SCREEN ===== */
+@media (max-width: 800px) {
+  .navbar nav {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 4.5rem;
+  }
+
+  .hero-photo {
+    width: 280px;
+    height: 360px;
+    border-radius: 140px 140px 0 0;
+  }
+
+  .hero-photo img {
+    border-radius: 128px 128px 0 0;
+  }
+
+  .intro {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .facts {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .two-columns,
+  .photos {
+    flex-direction: column;
+  }
+
+  .photo-poster,
+  .photo-lab {
+    width: 100%;
+  }
+}
